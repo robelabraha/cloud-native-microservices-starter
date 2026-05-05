@@ -83,7 +83,7 @@ docker-compose -f infrastructure/docker-compose.yml up --build
 - PUT /users/{id} → Update user
 - DELETE /users/{id} → Delete user
 
-** ## Order Service **
+ ## Order Service 
 - GET /orders → List all orders
 - POST /orders → Create new order
 - PUT /orders/{id} → Update order
