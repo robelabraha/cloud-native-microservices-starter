@@ -89,7 +89,7 @@ docker-compose -f infrastructure/docker-compose.yml up --build
 - PUT /orders/{id} → Update order
 - DELETE /orders/{id} → Delete order
 
-** ## 🔮 Future Work **
+## 🔮 Future Work 
 - Add Swagger/OpenAPI docs for API exploration
 - Add JUnit/Mockito tests for controllers and services
 - Extend with profiles (dev, test, prod) in application.yml
