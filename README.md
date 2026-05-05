@@ -105,3 +105,16 @@ flowchart TD
 - Integrate with CI/CD pipelines for deployment
 - Add API Gateway and Service Discovery (Eureka/Consul)
 - Explore Kubernetes manifests for cloud deployment
+
+
+## 🔄 Microservices Workflow (Mermaid Diagram)
+
+```mermaid
+flowchart LR
+    A[💻 Client Request] --> B[🧩 User Service<br/>(Spring Boot, Port 8081)]
+    A --> C[📦 Order Service<br/>(Spring Boot, Port 8082)]
+    B --> D[(🗄️ MySQL Database<br/>Dockerized, Port 3306)]
+    C --> D
+    D --> E[✅ Response to Client]
+
+
