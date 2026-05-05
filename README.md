@@ -69,7 +69,7 @@ docker-compose -f infrastructure/docker-compose.yml up --build
                 |   (Dockerized)    |
                 +-------------------+
 
-## 🔄 *Workflow*
+## 🔄 **Workflow**
 - Client sends HTTP requests to User or Order service.
 - Controller Layer handles API endpoints.
 - Service Layer applies business logic.
