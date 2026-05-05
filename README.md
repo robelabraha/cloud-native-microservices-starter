@@ -42,7 +42,7 @@ mvn clean package -DskipTests
 # Run with Docker Compose
 docker-compose -f infrastructure/docker-compose.yml up --build
 
-*## Access services*
+## Access services
 - User Service → http://localhost:8081
 - Order Service → http://localhost:8082
 - MySQL DB → localhost:3306
@@ -76,20 +76,20 @@ docker-compose -f infrastructure/docker-compose.yml up --build
 - Repository Layer interacts with MySQL via JPA/Hibernate.
 - Docker Compose orchestrates services + database.
 
-## 📖 *API Endpoints (Examples)*
+## 📖 API Endpoints (Examples)
 ## User Service
 - GET /users → List all users
 - POST /users → Create new user
 - PUT /users/{id} → Update user
 - DELETE /users/{id} → Delete user
 
-## *Order Service*
+## Order Service
 - GET /orders → List all orders
 - POST /orders → Create new order
 - PUT /orders/{id} → Update order
 - DELETE /orders/{id} → Delete order
 
-## 🔮 *Future Work*
+ 🔮 Future Work
 - Add Swagger/OpenAPI docs for API exploration
 - Add JUnit/Mockito tests for controllers and services
 - Extend with profiles (dev, test, prod) in application.yml
