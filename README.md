@@ -69,6 +69,15 @@ docker-compose -f infrastructure/docker-compose.yml up --build
                 |   (Dockerized)    |
                 +-------------------+
 
+## 🏗️ Architecture (Mermaid Diagram)
+
+```mermaid
+flowchart TD
+    A[Client Requests] --> B[User Service<br/>(Spring Boot, Port 8081)]
+    A --> C[Order Service<br/>(Spring Boot, Port 8082)]
+    B --> D[(MySQL DB<br/>Dockerized, Port 3306)]
+    C --> D
+
 ## 🔄 Workflow
 - Client sends HTTP requests to User or Order service.
 - Controller Layer handles API endpoints.
