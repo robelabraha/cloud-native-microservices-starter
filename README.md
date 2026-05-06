@@ -101,7 +101,7 @@ docker-compose -f infrastructure/docker-compose.yml up --build
 
 
 ## 🌀 Predictive Modeling Workflow
-
+```mermaid
 flowchart LR
     A["📊 Data Sources"] --> B["Preprocessing<br/>(Cleaning, Normalization)"]
     B --> C["Modeling<br/>(Regression & Classification)"]
