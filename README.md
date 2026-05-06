@@ -107,12 +107,41 @@ flowchart TD
 - Explore Kubernetes manifests for cloud deployment
 
 
-```mermaid
+flowchart TD
+    %% Global Styling
+    accTitle: Cloud Native Architecture
+    accDescr: Microservices architecture diagram in a digital box style
 
-flowchart LR
-    A[💻 Client Request] --> B[🧩 User Service<br/>(Spring Boot, Port 8081)]
-    A --> C[📦 Order Service<br/>(Spring Boot, Port 8082)]
-    B --> D[(🗄️ MySQL Database<br/>Dockerized, Port 3306)]
-    C --> D
-    D --> E[✅ Response to Client]
-```
+    subgraph Platform [Cloud Native Environment]
+        direction TB
+        
+        %% Entry Point
+        Client((💻 Client))
+
+        subgraph Services [Microservices Layer]
+            direction LR
+            UserSvc[🧩 User Service<br/><i>Spring Boot: 8081</i>]
+            OrderSvc[📦 Order Service<br/><i>Spring Boot: 8082</i>]
+        end
+
+        subgraph Data [Infrastructure Layer]
+            DB[(🗄️ MySQL Database<br/>Port: 3306)]
+        end
+
+        %% Connections
+        Client --> UserSvc
+        Client --> OrderSvc
+        UserSvc --> DB
+        OrderSvc --> DB
+    end
+
+    %% Visual Styling (The "Digital Box" look)
+    style Platform fill:#f0f4f8,stroke:#0969da,stroke-width:2px,stroke-dasharray: 5 5
+    style Services fill:#ffffff,stroke:#2da44e,stroke-width:2px
+    style Data fill:#ffffff,stroke:#cf222e,stroke-width:2px
+    
+    %% Node Styling
+    style UserSvc fill:#e6ffed,stroke:#2da44e,color:#1a7f37
+    style OrderSvc fill:#e6ffed,stroke:#2da44e,color:#1a7f37
+    style DB fill:#fff8c5,stroke:#9a6700,color:#704e00
+    style Client fill:#ddf4ff,stroke:#0969da,color:#0550ae
