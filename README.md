@@ -97,7 +97,6 @@ docker-compose -f infrastructure/docker-compose.yml up --build
                 |     MySQL DB      |
                 |   (Dockerized)    |
                 +-------------------+
-```)
 
 
 ## 🔄 Predictive Modeling Workflow (Mermaid Diagram)
