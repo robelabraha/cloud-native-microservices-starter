@@ -72,11 +72,13 @@ docker-compose -f infrastructure/docker-compose.yml up --build
 ## 🏗️ Architecture (Mermaid Diagram)
 
 ```mermaid
-flowchart TD
-    A[Client Requests] --> B[User Service<br/>(Spring Boot, Port 8081)]
-    A --> C[Order Service<br/>(Spring Boot, Port 8082)]
-    B --> D[(MySQL DB<br/>Dockerized, Port 3306)]
+flowchart LR
+    A[💻 Client Request] --> B[🧩 User Service<br/>(Spring Boot, Port 8081)]
+    A --> C[📦 Order Service<br/>(Spring Boot, Port 8082)]
+    B --> D[(🗄️ MySQL Database<br/>Dockerized, Port 3306)]
     C --> D
+    D --> E[✅ Response to Client]
+
 
 ## 🔄 Workflow
 - Client sends HTTP requests to User or Order service.
@@ -105,15 +107,3 @@ flowchart TD
 - Integrate with CI/CD pipelines for deployment
 - Add API Gateway and Service Discovery (Eureka/Consul)
 - Explore Kubernetes manifests for cloud deployment
-
-| 🌐 **Project Infrastructure Architecture** |
-| :--- |
-| ```mermaid
-  flowchart TD
-      subgraph Box [ ]
-          direction TB
-          A[Client] --> B[Services]
-          B --> C[(Database)]
-      end
-      style Box fill:#fff,stroke:#0969da,stroke-width:2px
-  ``` |
