@@ -29,7 +29,7 @@ cloud-native-microservices-starter/
  │    └── src/main/resources/application.yml
  └── infrastructure/
       └── docker-compose.yml
-
+```
 ## ⚡ Quickstart
 ```bash
 # Clone the repo
