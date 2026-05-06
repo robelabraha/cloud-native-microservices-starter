@@ -115,3 +115,4 @@ flowchart LR
     B --> D[(🗄️ MySQL Database<br/>Dockerized, Port 3306)]
     C --> D
     D --> E[✅ Response to Client]
+```
