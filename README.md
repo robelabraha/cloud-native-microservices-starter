@@ -47,6 +47,35 @@ docker-compose -f infrastructure/docker-compose.yml up --build
 - Order Service → http://localhost:8082
 - MySQL DB → localhost:3306
 
+## 🔄 Workflow
+- Client sends HTTP requests to User or Order service.
+- Controller Layer handles API endpoints.
+- Service Layer applies business logic.
+- Repository Layer interacts with MySQL via JPA/Hibernate.
+- Docker Compose orchestrates services + database.
+
+## 📖 API Endpoints (Examples)
+## User Service
+- GET /users → List all users
+- POST /users → Create new user
+- PUT /users/{id} → Update user
+- DELETE /users/{id} → Delete user
+
+ ## Order Service 
+- GET /orders → List all orders
+- POST /orders → Create new order
+- PUT /orders/{id} → Update order
+- DELETE /orders/{id} → Delete order
+
+## 🔮 Future Work 
+- Add Swagger/OpenAPI docs for API exploration
+- Add JUnit/Mockito tests for controllers and services
+- Extend with profiles (dev, test, prod) in application.yml
+- Integrate with CI/CD pipelines for deployment
+- Add API Gateway and Service Discovery (Eureka/Consul)
+- Explore Kubernetes manifests for cloud deployment
+
+
 ## 🏗️ Architecture
                 +-------------------+
                 |   User Service    |
@@ -80,30 +109,3 @@ flowchart LR
     D --> E[✅ Response to Client]
 
 
-## 🔄 Workflow
-- Client sends HTTP requests to User or Order service.
-- Controller Layer handles API endpoints.
-- Service Layer applies business logic.
-- Repository Layer interacts with MySQL via JPA/Hibernate.
-- Docker Compose orchestrates services + database.
-
-## 📖 API Endpoints (Examples)
-## User Service
-- GET /users → List all users
-- POST /users → Create new user
-- PUT /users/{id} → Update user
-- DELETE /users/{id} → Delete user
-
- ## Order Service 
-- GET /orders → List all orders
-- POST /orders → Create new order
-- PUT /orders/{id} → Update order
-- DELETE /orders/{id} → Delete order
-
-## 🔮 Future Work 
-- Add Swagger/OpenAPI docs for API exploration
-- Add JUnit/Mockito tests for controllers and services
-- Extend with profiles (dev, test, prod) in application.yml
-- Integrate with CI/CD pipelines for deployment
-- Add API Gateway and Service Discovery (Eureka/Consul)
-- Explore Kubernetes manifests for cloud deployment
