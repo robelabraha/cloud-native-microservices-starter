@@ -103,8 +103,8 @@ docker-compose -f infrastructure/docker-compose.yml up --build
 
 ```mermaid
 flowchart LR
-    A[💻 Client Request] --> B[🧩 User Service<br/>(Spring Boot, Port 8081)]
-    A --> C[📦 Order Service<br/>(Spring Boot, Port 8082)]
-    B --> D[(🗄️ MySQL Database<br/>Dockerized, Port 3306)]
+    A[Client Request] --> B[User Service<br/>(Spring Boot, Port 8081)]
+    A --> C[Order Service<br/>(Spring Boot, Port 8082)]
+    B --> D[(MySQL Database<br/>Dockerized, Port 3306)]
     C --> D
-    D --> E[✅ Response to Client]
+    D --> E[Response to Client]
