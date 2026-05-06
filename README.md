@@ -100,13 +100,14 @@ docker-compose -f infrastructure/docker-compose.yml up --build
 ```
 
 
-## 🔄 Predictive Modeling Workflow (Mermaid Diagram)
+## 🌀 Predictive Modeling Workflow
 
 ```mermaid
 flowchart LR
-    A[📊 Data Sources] --> B[Preprocessing<br/>(Cleaning, Normalization, Feature Engineering)]
+    A[📊 Data Sources] --> B[Preprocessing<br/>(Cleaning, Normalization)]
     B --> C[Modeling<br/>(Regression & Classification)]
-    C --> D[Evaluation<br/>(Accuracy, Precision, Recall, RMSE, AUC)]
+    C --> D[Evaluation<br/>(Accuracy, Precision, Recall)]
     D --> E[Interpretation<br/>(SHAP, LIME)]
-    E --> F[Deployment<br/>(Insights, Dashboards, Scripts)]
+    E --> F[Deployment<br/>(Insights, Dashboards)]
+``` <-- ADD THESE THREE BACKTICKS HERE TO RENDER THE BOX
 
