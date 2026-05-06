@@ -99,7 +99,6 @@ docker-compose -f infrastructure/docker-compose.yml up --build
                 +-------------------+
 
 
-## 🏗️ Architecture (Mermaid Diagram)
 
 ## 🔄 Predictive Modeling Workflow (Mermaid Diagram)
 
